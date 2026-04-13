@@ -21,6 +21,8 @@
                 <Property Name="FileName" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="NoOfEmps" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="CutoffDate" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Flag" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <NavigationProperty Name="TO_ITEMS" Relationship="ZR_VALIDATION_SF_SRV.ass_emp_header_item" FromRole="FromRole_ass_emp_header_item" ToRole="ToRole_ass_emp_header_item"/>
                 <NavigationProperty Name="TO_EXCEL" Relationship="ZR_VALIDATION_SF_SRV.ass_emp_header_excel" FromRole="FromRole_ass_emp_header_excel" ToRole="ToRole_ass_emp_header_excel"/>
             </EntityType>

@@ -2,6 +2,50 @@
 <edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
     <edmx:DataServices m:DataServiceVersion="2.0">
         <Schema Namespace="ZR_VALIDATION_SF_COMP_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="zemp_codification" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="RuleFieldID"/>
+                </Key>
+                <Property Name="RuleFieldID" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Text (200 char)" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ha002" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ci001" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ci002" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ci003" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pc001" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pc002" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pc003" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pc004" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="REMARKS" Type="Edm.String" Nullable="false" MaxLength="500" sap:unicode="false" sap:label="Text (200 char)" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="zemp_codf" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="RuleFieldID"/>
+                </Key>
+                <Property Name="RuleFieldID" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Text (200 char)" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ha002" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ci001" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ci002" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ci003" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pc001" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pc002" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pc003" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pc004" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="REMARKS" Type="Edm.String" Nullable="false" MaxLength="500" sap:unicode="false" sap:label="Text (200 char)" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="zcomp_val" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="RuleFieldID"/>
+                </Key>
+                <Property Name="RuleFieldID" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Text (200 char)" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ha002" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ci001" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ci002" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ci003" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pc001" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pc002" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pc003" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pc004" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
             <EntityType Name="zemp_item" sap:content-version="1">
                 <Key>
                     <PropertyRef Name="RuleFieldID"/>
@@ -26,6 +70,8 @@
                 <Property Name="FileName" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="NoOfEmps" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="CutoffDate" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Flag" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <NavigationProperty Name="TO_ITEMS" Relationship="ZR_VALIDATION_SF_COMP_SRV.ass_emp_header_item" FromRole="FromRole_ass_emp_header_item" ToRole="ToRole_ass_emp_header_item"/>
             </EntityType>
             <EntityType Name="zemp_drop" sap:content-version="1">
@@ -34,6 +80,27 @@
                 </Key>
                 <Property Name="TemplateId" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="TemplateDesc" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZExcelErrorLog" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="RuleFieldID"/>
+                </Key>
+                <Property Name="RuleFieldID" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Text (200 char)" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Row" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ValidationField" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ErrorLog" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LEGACY_CODE" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="zexcel_error" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="RuleFieldID"/>
+                </Key>
+                <Property Name="RuleFieldID" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Text (200 char)" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Row" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ValidationField" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ErrorLog" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LEGACY_CODE" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="job_status" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
             </EntityType>
             <Association Name="ass_emp_header_item" sap:content-version="1">
                 <End Type="ZR_VALIDATION_SF_COMP_SRV.zemp_header" Multiplicity="1" Role="FromRole_ass_emp_header_item"/>
@@ -48,9 +115,14 @@
                 </ReferentialConstraint>
             </Association>
             <EntityContainer Name="ZR_VALIDATION_SF_COMP_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="zemp_codificationSet" EntityType="ZR_VALIDATION_SF_COMP_SRV.zemp_codification" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="zemp_codfSet" EntityType="ZR_VALIDATION_SF_COMP_SRV.zemp_codf" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="zcomp_valSet" EntityType="ZR_VALIDATION_SF_COMP_SRV.zcomp_val" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="zemp_itemSet" EntityType="ZR_VALIDATION_SF_COMP_SRV.zemp_item" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
                 <EntitySet Name="zemp_headerSet" EntityType="ZR_VALIDATION_SF_COMP_SRV.zemp_header" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="zemp_dropSet" EntityType="ZR_VALIDATION_SF_COMP_SRV.zemp_drop" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ZExcelErrorLogSet" EntityType="ZR_VALIDATION_SF_COMP_SRV.ZExcelErrorLog" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="zexcel_errorSet" EntityType="ZR_VALIDATION_SF_COMP_SRV.zexcel_error" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <AssociationSet Name="ass_emp_header_itemSet" Association="ZR_VALIDATION_SF_COMP_SRV.ass_emp_header_item" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="zemp_headerSet" Role="FromRole_ass_emp_header_item"/>
                     <End EntitySet="zemp_itemSet" Role="ToRole_ass_emp_header_item"/>

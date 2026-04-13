@@ -1,16 +1,16 @@
 .vBox1
 {
     width: 60%;
-    max-width: 100%;
-    border: 0.5px solid rgba(0, 0, 0, 0.553);
+    max-width: 700px;
+    min-width: 700px;
+    border: 0.5px solid rgba(185, 247, 162, 0.553);
     border-radius: 8px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 6px;
     padding-right: 6px;
     box-sizing: border-box;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.267);
-   
+    box-shadow: 0 2px 8px rgba(95, 13, 13, 0.267); 
 }
 .customFioriHeader .sapMPageHeader
 {
@@ -48,4 +48,20 @@
     font-weight: bold;
     color: #504a4a;
     margin-bottom: -5rem;
+}
+.sapMRbBLabel {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sapMRbG {
+    width: 100% !important;
+    min-height: 6rem;
+}
+.sapUiFormResGrid {
+    width: 100% !important;
+}
+.sapMRbB {
+    height: 2rem !important;
+    line-height: 2rem !important;
 }

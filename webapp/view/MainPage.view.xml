@@ -28,9 +28,9 @@
                 <Label id="_IDGenLabel" text="Template" />
                 <RadioButtonGroup id="rbFileType" columns="1" selectedIndex="" select="onTemplateSelection">
                     <buttons>
-                        <RadioButton id="RB1" text="Employee Data Master" />
-                        <RadioButton id="RB2" text="Employee CSF Data" />
-                        <RadioButton id="RB3" text="Employee Data Compensation" />
+                        <RadioButton id="EmployeeData" text="Employee Data Master" />
+                        <RadioButton id="CsfData" text="Employee Country Specific Fields(CSF) Data" />
+                        <RadioButton id="CompData" text="Employee Data Compensation" />
                     </buttons>
                 </RadioButtonGroup>
 
@@ -66,8 +66,29 @@
                 <Button id="_IDGenButton2"
                     text="Clear"
                     type="Reject"
-                    press="onClearPress" />
-            </HBox>   
+                    press="onClearPress"
+                    class="sapUiTinyMarginEnd"/>
+                <Button id="_IDGenButton3"
+                    text="Get Error Log"
+                    type="Success"
+                    press="onPressOfErrorSet"
+                    class="sapUiTinyMarginEnd"
+                    visible="false"/>  
+                <!--
+                <Button id="_IDGenButton7"
+                    text="Open Dialog"
+                    type="Critical"
+                    press="onOpenCard"
+                    class="sapUiTinyMarginEnd"
+                    visible="true"/>
+                -->
+                <Button id="_IDGenButton8"
+                    text="Get Codified Data"
+                    type="Accept"
+                    press="onDownloadCodifiedData"
+                    class="sapUiTinyMarginEnd"
+                    visible="false"/>
+            </HBox>
             </f:SimpleForm>
         </VBox>
     </content>
