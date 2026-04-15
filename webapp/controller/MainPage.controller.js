@@ -775,11 +775,11 @@ sap.ui.define([
                 var that = this;
                 const now = Date.now();
                 if (this._lastStatus === "RUNNING" && (now - this._lastCheckTime < 10000)) {
-                    sap.m.MessageToast.show("Still processing...");
+                    sap.m.MessageToast.show("Please wait before checking again.");
                     return;
                 }
                 if (this._lastCheckTime && (now - this._lastCheckTime < 30000)) {
-                    sap.m.MessageToast.show("Please wait before checking again");
+                    sap.m.MessageToast.show("Please wait before checking again.");
                     return;
                 }
                 this._lastCheckTime = now;
@@ -790,16 +790,26 @@ sap.ui.define([
                     success: function (oErrorResponse) {
                         oView.setBusy(false);
                         var jobStatus = oErrorResponse.results[0].job_status;
-                        if (jobStatus === "Job is still in progress. Please check in a moment.") {
+                        if (jobStatus === "Job is still in progress. Please check later.")
+                        {
                             MessageBox.warning("Validation is still in progress.", {
-                                title: "Processing",
+                                title: "Job status",
                                 details: "The file is large and validation is currently running in the background. Please wait a moment and try again.",
                                 contentWidth: "500px"
                             });
                             that._lastStatus = "RUNNING";
-
                         }
-                        else {
+                        else if(jobStatus === 'Job was cancelled.')
+                        {
+                            MessageBox.error("Job has been cancelled.Please try again!", {
+                                title: "Job status",
+                                details: "The background job was cancelled due to issues in the file data. Please verify the file and try again.",
+                                contentWidth: "500px"
+                            });
+                            return;
+                        }
+                        else
+                        {
                             var errorLog = oErrorResponse.results || [];
                             oView.setBusy(false);
                             if (errorLog[0].ErrorLog === "No errors found in the uploaded file") {

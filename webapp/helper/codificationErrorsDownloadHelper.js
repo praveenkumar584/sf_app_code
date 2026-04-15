@@ -17,6 +17,7 @@ sap.ui.define([], function () {
                 {
                     var copy = Object.assign({}, item);
                     delete copy.__metadata;
+                    delete copy.RuleFieldID;
                     return copy
                 });
                 var worksheet=XLSX.utils.json_to_sheet(reorderedList);
